@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temperature Converter</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel = 'stylesheet' href = 'style.css'>
+        <link rel="icon" href="pfp_real.png" type="image/png">
+    </head>
+    <body>
+        <p class="title">Temperature Converter</p>
+        <div class="container">
+            <input type="text" class="input js-temperatureInput" placeholder="0.00">
+            <div>
+                <div class="dropdown">
+                    <p class="item1">From Unit</p>
+                    <button class="dropdownButton dropButton1" onclick="dropdownButtonClicked('1')">v</button>
+                </div>
+                <div class="dropdownContent content1 hidden">
+                    <div class="dropdownItem" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                        <button class="dropdownItemButton drop1Choice1" onclick="dropdownItemClicked('1', '1')">Fahrenheit</button>
+                    </div>
+                    <div class="dropdownItem">
+                        <button class="dropdownItemButton drop1Choice2" onclick="dropdownItemClicked('1', '2')">Celsius</button>
+                    </div>
+                    <div class="dropdownItem" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                        <button class="dropdownItemButton drop1Choice3" onclick="dropdownItemClicked('1', '3')">Kelvin</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="dropdown">
+                    <p class="item2">To Unit</p>
+                    <button class="dropdownButton dropButton2" onclick="dropdownButtonClicked('2')">v</button>
+                </div>
+                <div class="dropdownContent content2 hidden">
+                    <div class="dropdownItem" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                        <button class="dropdownItemButton drop2Choice1" onclick="dropdownItemClicked('2', '1')">Fahrenheit</button>
+                    </div>
+                    <div class="dropdownItem">
+                        <button class="dropdownItemButton drop2Choice2" onclick="dropdownItemClicked('2', '2')">Celsius</button>
+                    </div>
+                    <div class="dropdownItem" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                        <button class="dropdownItemButton drop2Choice3" onclick="dropdownItemClicked('2', '3')">Kelvin</button>
+                    </div>
+                </div>
+            </div>
+            <button class="convertButton" onclick="convert()">Convert</button>
+        </div>
+        <p class="result js-temperatureOutput"></p>
+        <script src="script.js"></script>
+    </body>
+</html>
